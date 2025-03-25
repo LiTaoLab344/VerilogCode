@@ -54,8 +54,8 @@ module asy_fifo#(
 
     
     //读写指针转换成格雷码
-    assign wr_ptr_g = wr_ptr ^ (wr_ptr >>> 1);
-    assign rd_ptr_g = rd_ptr ^ (rd_ptr >>> 1);
+    assign wr_ptr_g = wr_ptr ^ (wr_ptr >> 1);
+    assign rd_ptr_g = rd_ptr ^ (rd_ptr >> 1);
 
 
     //定义打拍延迟格雷码
